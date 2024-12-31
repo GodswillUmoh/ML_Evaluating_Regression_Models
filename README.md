@@ -13,3 +13,18 @@ _Based on your dataset, this repo explains how to select the best regression mod
 
 ## Application of R² Score in the Multiple Linear Regression
 [Click Here to View Python Code](https://colab.research.google.com/drive/1Mky8jQRiDqO_MTZL6uxKrpXXkgbZ54aV#scrollTo=xPagAOKDywV4)
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+```
+```python
+dataset = pd.read_csv('ENTER_THE_NAME_OF_YOUR_DATASET_HERE.csv')
+X = dataset.iloc[:, :-1].values
+y = dataset.iloc[:, -1].values
+```
+```python
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 0)
+```
