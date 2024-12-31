@@ -90,3 +90,7 @@ regressor = SVR(kernel = 'rbf')
 regressor.fit(X_train, y_train)
 ```
 
+## Question
++ How Do I get the best model for my Machine Learning?
++ Answer: Try the R2-Score metrics on all the regression model, the one with the highest is the best
++ In the Example above, we saw that the best performing model is the Random Forest with 0.96 metrics
