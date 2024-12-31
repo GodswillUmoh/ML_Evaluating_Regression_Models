@@ -29,6 +29,20 @@ from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 0)
 ```
 
+## Application of R² Score in the Decision Tree Regression
+[Click Here to View Python Code](https://colab.research.google.com/drive/1fp-4iiJRRHJXQ0hBaGH-tgPx97a6wVvn#scrollTo=EebHA3EOIkQK)
+
+```python
+from sklearn.tree import DecisionTreeRegressor
+regressor = DecisionTreeRegressor(random_state = 0)
+regressor.fit(X_train, y_train)
+```
+```python
+y_pred = regressor.predict(X_test)
+np.set_printoptions(precision=2)
+print(np.concatenate((y_pred.reshape(len(y_pred),1), y_test.reshape(len(y_test),1)),1))
+```
+
 ## Application of R² Score in the Polynomial Regression
 [Click Here to View Python Code](https://colab.research.google.com/drive/1wyWoplvf7TN2nU_j0nkDc4kDUew-EYXs#scrollTo=36aFLFBK9pMk)
 
