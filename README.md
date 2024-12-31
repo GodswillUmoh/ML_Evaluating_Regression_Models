@@ -74,3 +74,19 @@ np.set_printoptions(precision=2)
 print(np.concatenate((y_pred.reshape(len(y_pred),1), y_test.reshape(len(y_test),1)),1))
 ```
 
+## Application of R² Score in the Support Vector Regression
+[Click Here to View Python Code](https://colab.research.google.com/drive/1j4AZl3O4lXvT_aCkUC4NR5HmLyNhXqJA#scrollTo=y6R4rt_GRz15)
+
+```python
+from sklearn.preprocessing import StandardScaler
+sc_X = StandardScaler()
+sc_y = StandardScaler()
+X_train = sc_X.fit_transform(X_train)
+y_train = sc_y.fit_transform(y_train)
+```
+```python
+from sklearn.svm import SVR
+regressor = SVR(kernel = 'rbf')
+regressor.fit(X_train, y_train)
+```
+
